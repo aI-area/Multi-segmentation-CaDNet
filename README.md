@@ -6,7 +6,7 @@
 
 ## Getting Started
 
-Multi-segmentation model
+Multi-organ segmentation model
 
 ### Prerequisites
 
@@ -16,10 +16,30 @@ install `nnUNet`：
 ```
 pip install nnUNet
 ```
-construct model:
+Install the source code of the nnUNet model:
 ```
-git clone 
+git clone https://github.com/MIC-DKFZ/batchgeneratorsv2.git
 ```
+```
+Cd batchgeneratorsv2
+```
+```
+Pip install -e .
+```
+In the same way, install the network architecture to build your own model:
+```
+git clone https://github.com/MIC-DKFZ/dynamic-network-architectures.git
+Cd dynamic-network-architectures
+Pip install -e .
+```
+Find `nnUNetPlans.json` to use your own model:
+```
+"architecture": {
+                "network_class_name": "dynamic_network_architectures.architectures.mynet.MyNet",
+...
+}
+```
+
 
 ## Running the Model
 
