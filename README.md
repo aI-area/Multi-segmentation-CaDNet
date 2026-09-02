@@ -57,10 +57,11 @@ pip install -e .
 ---
 ## Generate Network Configuration
 
-The customized nnUNetPlans.json configuration for CaDNet can be generated using:
+The customized `nnUNetPlans.json` configuration for CaDNet can be generated using:
 
+```bash
 python generate_config.py
-
+```
 The generated configuration specifies the CaDNet architecture used by nnU-Net.
 
 ---
